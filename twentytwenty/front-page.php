@@ -1,7 +1,118 @@
 <?php
 get_header();
+
+$firstLeft = get_field('first_left');
+$secondLeft = get_field('second_left');
+$firstImg = get_field('first_img');
+$secondImg = get_field('second_img');
+$dropdown = get_field('dropdown');
+
+$leftTitle = get_field('left_title');
+$rightTitle = get_field('right_title');
+$leftFirstPar = get_field('left_first_par');
+$leftSecondPar = get_field('left_second_par');
+$rightFirstPar = get_field('right_first_par');
+$rightSecondPar = get_field('right_second_par');
+
 ?>
 
+<main id="site-content" role="main">
+<div class="container my-container">
+    <div class="row navigacija text-center mb-3">
+        <button class="col-12 col-md-3 nav-g"><span class="nav-gumbi aktiven">overview</span></button>
+        <button class="col-12 col-md-3 nav-g"><span class="nav-gumbi">campain activities</span></button>
+        <button class="col-12 col-md-3 nav-g"><span class="nav-gumbi">materials</span></button>
+        <button class="col-12 col-md-3 nav-g"><span class="nav-gumbi">reward program</span></button>
+    </div>
+    <div class="row my-5">
+        <div class="col-12 col-md-6">
+            <h3 class="naslov ml-5">HEALTHY ARTERIES CAMPAIGN</h3>
+            <div class="container">
+                <div class="row">
+                    <div class="odstavek ml-5">
+                        <?php echo $firstLeft; ?>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="odstavek ml-5 my-5">
+                        <?php echo $secondLeft; ?>
+                    </div>
+                </div>
+                <button id="pokazi-vec" class="ml-2" data-toggle="collapse" data-target="#pokazi-skrij" aria-expanded="false" aria-controls="pokazi-skrij">
+                    <div class="row">
+                        <div>SHOW MORE</div>
+                        <div class="triangle-down my-auto mx-3"></div>
+                    </div>
+                </button>
+                <div class="row collapse" id="pokazi-skrij">
+                    <div class="odstavek ml-5 mb-5">
+                        <?php echo $dropdown; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 slikca"><img class="img-fluid" src="<?php echo $firstImg; ?>" alt=""></div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-6 rumena">
+            <h3 class="naslov ml-5"><?php echo $leftTitle; ?></h3>
+            <div class="container">
+                <div class="row">
+                    <div class="odstavek ml-5">
+                        <?php echo $leftFirstPar; ?>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="odstavek ml-5 my-5">
+                        <?php echo $leftSecondPar; ?>
+                    </div>
+                </div>
+                <img class="img-fluid mt-5" src="<?php echo $secondImg; ?>" alt="">
+            </div>
+        </div>
+        <div class="col-12 col-md-6 rdeca">
+            <h3 class="naslov"><?php echo $rightTitle; ?></h3>
+            <div class="container">
+                <div class="row">
+                    <div class="odstavek ml-5">
+                        <?php echo $rightFirstPar; ?>
+                    </div>
+                </div>
+                <div class="row odtsavek">
+                    <?php echo $rightSecondPar; ?>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-6 siva">
+            <div class="odstavek text-center my-5 mx-auto">
+                <b>Your agreement with us includes these Rules and Conditions for Participation in the Healthy Arteries Campaign. Please read them carefully here:</b>
+                <h4 class="naslov-link">RULES AND CONDITIONS</h4>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 siva siva-levi">
+            <div class="odstavek text-center my-5 mx-auto">
+                <b>The campaign includes a joining fee. To find out more about the fees for the campaign, please click on this button:</b>
+                <br><br>
+                <h4 class="naslov-link">PARTNERSHIP FEES</h4>
+            </div>
+        </div>
+    </div>
+    <div class="row mx-auto my-5 text-center">
+        <div class="col-12 my-4 grey-color"><b>Become a partner by clicking here:</b></div>
+        <div class="col-12"><b-button class="btn gumb mx-auto">APPLY</b-button></b></div>
+    </div>
+</div>
+	
+</main><!-- #site-content -->
+
+
+<?php
+get_footer();
+
+
+/*
 <main id="site-content" role="main">
 <div class="container my-container">
     <div class="row navigacija text-center mb-3">
@@ -111,8 +222,5 @@ get_header();
     </div>
 </div>
 	
-</main><!-- #site-content -->
-
-
-<?php
-get_footer();
+</main>
+*/
